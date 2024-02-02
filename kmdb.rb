@@ -92,6 +92,12 @@ new_studio.save
 
 warner_bros = Studio.find_by ({"studio_name" => "Warner Bros."})
 
+new_movie ["movie_name"] = "Batman Begins"
+new_movie ["year_released"] = "2005"
+new_movie ["age_rating"] = "PG-13"
+new_movie ["studio"] = warner_bros ["id"]
+new_movie.save
+new_movie = Movie.new
 new_movie ["movie_name"] = "The Dark Knight"
 new_movie ["year_released"] = "2008"
 new_movie ["age_rating"] = "PG-13"
@@ -103,46 +109,104 @@ new_movie ["year_released"] = "2012"
 new_movie ["age_rating"] = "PG-13"
 new_movie ["studio"] = warner_bros ["id"]
 new_movie.save
-new_movie = Movie.new
-new_movie ["movie_name"] = "Batman Begins"
-new_movie ["year_released"] = "2005"
-new_movie ["age_rating"] = "PG-13"
-new_movie ["studio"] = warner_bros ["id"]
-new_movie.save
+
+
+begins = Movie.where ({"movie_name" => "Batman Begins"})
+knight = Movie.where ({"movie_name" => "The Dark Knight"})
+rises = Movie.where ({"movie_name" => "The Dark Knight Rises"})
 
 new_talent = Talent.new
 new_talent ["actor_name"] = "Christian Bale"
 new_talent.save
+christian = Talent.where ({"actor_name" => "Christian Bale"})
 new_talent = Talent.new
 new_talent ["actor_name"] = "Michael Cain"
 new_talent.save
+michael = Talent.where ({"actor_name" => "Michael Cain"})
 new_talent = Talent.new
 new_talent ["actor_name"] = "Liam Neeson"
 new_talent.save
+liam = Talent.where ({"actor_name" => "Liam Neeson"})
 new_talent = Talent.new
 new_talent ["actor_name"] = "Katie Holmes"
 new_talent.save
+katie = Talent.where ({"actor_name" => "Katie Holmes"})
 new_talent = Talent.new
 new_talent ["actor_name"] = "Gary Oldman"
 new_talent.save
+gary = Talent.where ({"actor_name" => "Gary Oldman"})
 new_talent = Talent.new
 new_talent ["actor_name"] = "Heath Ledger"
 new_talent.save
+heath = Talent.where ({"actor_name" => "Heath Ledger"})
 new_talent = Talent.new
 new_talent ["actor_name"] = "Aaron Eckhart"
 new_talent.save
+aaron = Talent.where ({"actor_name" => "Aaron Eckhart"})
 new_talent = Talent.new
 new_talent ["actor_name"] = "Maggie Gyllenhaal"
 new_talent.save
+maggie = Talent.where ({"actor_name" => "Maggie Gyllenhaal"})
 new_talent = Talent.new
 new_talent ["actor_name"] = "Tom Hardy"
 new_talent.save
+tom = Talent.where ({"actor_name" => "Tom Hardy"})
 new_talent = Talent.new
 new_talent ["actor_name"] = "Joseph Gordon-Levitt"
 new_talent.save
+joseph = Talent.where ({"actor_name" => "Joseph Gordon-Levitt"})
 new_talent = Talent.new
 new_talent ["actor_name"] = "Anne Hathaway"
 new_talent.save
+anne = Talent.where ({"actor_name" => "Anne Hathaway"})
+"Bruce Wayne"
+"Alfred"
+"Ra's Al Ghul"
+"Rachel Dawes"
+"Commissioner Gordon"
+"Bruce Wayne"
+"Joker"
+"Harvey Dent"
+"Alfred"
+"Rachel Dawes"
+"Bruce Wayne"
+"Commissiones Gordon"
+"Bane"
+"John Blake"
+"Selina Kyle"
+new_character = ["character_name"] = 
+new_character = Character.new
+new_character = ["character_name"] = 
+new_character = Character.new
+new_character = ["character_name"] = 
+new_character = Character.new
+new_character = ["character_name"] = 
+new_character = Character.new
+new_character = ["character_name"] = 
+new_character = Character.new
+new_character = ["character_name"] = 
+new_character = Character.new
+new_character = ["character_name"] = 
+new_character = Character.new
+new_character = ["character_name"] = 
+new_character = Character.new
+new_character = ["character_name"] = 
+new_character = Character.new
+new_character = ["character_name"] = 
+new_character = Character.new
+new_character = ["character_name"] = 
+new_character = Character.new
+new_character = ["character_name"] = 
+new_character = Character.new
+new_character = ["character_name"] = 
+new_character = Character.new
+new_character = ["character_name"] = 
+new_character = Character.new
+new_character = ["character_name"] = 
+new_character = Character.new
+new_character = ["character_name"] = 
+new_character = Character.new
+new_character = ["character_name"] = 
 
 
 
