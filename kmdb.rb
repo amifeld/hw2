@@ -85,11 +85,30 @@ new_character = Character.new
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
-warner bros = Studio.find_by({"studio_name" => "Warner Bros."})
+warner_bros = Studio.find_by ({"studio_name" => "Warner Bros."})
 
 new_studio ["studio_name"] = "Warner Bros."
 new_studio.save
 
+warner_bros = Studio.find_by ({"studio_name" => "Warner Bros."})
+
+new_movie ["movie_name"] = "The Dark Knight"
+new_movie ["year_released"] = "2008"
+new_movie ["age_rating"] = "PG-13"
+new_movie ["studio"] = warner_bros ["id"]
+new_movie.save
+new_movie = Movie.new
+new_movie ["movie_name"] = "The Dark Knight Rises"
+new_movie ["year_released"] = "2012"
+new_movie ["age_rating"] = "PG-13"
+new_movie ["studio"] = warner_bros ["id"]
+new_movie.save
+new_movie = Movie.new
+new_movie ["movie_name"] = "Batman Begins"
+new_movie ["year_released"] = "2005"
+new_movie ["age_rating"] = "PG-13"
+new_movie ["studio"] = warner_bros ["id"]
+new_movie.save
 # TODO!
 
 # Prints a header for the movies output
