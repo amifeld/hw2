@@ -111,103 +111,133 @@ new_movie ["studio"] = warner_bros ["id"]
 new_movie.save
 
 
-begins = Movie.where ({"movie_name" => "Batman Begins"})
-knight = Movie.where ({"movie_name" => "The Dark Knight"})
-rises = Movie.where ({"movie_name" => "The Dark Knight Rises"})
+begins = Movie.find_by ({"movie_name" => "Batman Begins"})
+knight = Movie.find_by ({"movie_name" => "The Dark Knight"})
+rises = Movie.find_by ({"movie_name" => "The Dark Knight Rises"})
 
 new_talent = Talent.new
 new_talent ["actor_name"] = "Christian Bale"
 new_talent.save
-christian = Talent.where ({"actor_name" => "Christian Bale"})
+christian = Talent.find_by ({"actor_name" => "Christian Bale"})
 new_talent = Talent.new
 new_talent ["actor_name"] = "Michael Cain"
 new_talent.save
-michael = Talent.where ({"actor_name" => "Michael Cain"})
+michael = Talent.find_by ({"actor_name" => "Michael Cain"})
 new_talent = Talent.new
 new_talent ["actor_name"] = "Liam Neeson"
 new_talent.save
-liam = Talent.where ({"actor_name" => "Liam Neeson"})
+liam = Talent.find_by ({"actor_name" => "Liam Neeson"})
 new_talent = Talent.new
 new_talent ["actor_name"] = "Katie Holmes"
 new_talent.save
-katie = Talent.where ({"actor_name" => "Katie Holmes"})
+katie = Talent.find_by ({"actor_name" => "Katie Holmes"})
 new_talent = Talent.new
 new_talent ["actor_name"] = "Gary Oldman"
 new_talent.save
-gary = Talent.where ({"actor_name" => "Gary Oldman"})
+gary = Talent.find_by ({"actor_name" => "Gary Oldman"})
 new_talent = Talent.new
 new_talent ["actor_name"] = "Heath Ledger"
 new_talent.save
-heath = Talent.where ({"actor_name" => "Heath Ledger"})
+heath = Talent.find_by ({"actor_name" => "Heath Ledger"})
 new_talent = Talent.new
 new_talent ["actor_name"] = "Aaron Eckhart"
 new_talent.save
-aaron = Talent.where ({"actor_name" => "Aaron Eckhart"})
+aaron = Talent.find_by ({"actor_name" => "Aaron Eckhart"})
 new_talent = Talent.new
 new_talent ["actor_name"] = "Maggie Gyllenhaal"
 new_talent.save
-maggie = Talent.where ({"actor_name" => "Maggie Gyllenhaal"})
+maggie = Talent.find_by ({"actor_name" => "Maggie Gyllenhaal"})
 new_talent = Talent.new
 new_talent ["actor_name"] = "Tom Hardy"
 new_talent.save
-tom = Talent.where ({"actor_name" => "Tom Hardy"})
+tom = Talent.find_by ({"actor_name" => "Tom Hardy"})
 new_talent = Talent.new
 new_talent ["actor_name"] = "Joseph Gordon-Levitt"
 new_talent.save
-joseph = Talent.where ({"actor_name" => "Joseph Gordon-Levitt"})
+joseph = Talent.find_by ({"actor_name" => "Joseph Gordon-Levitt"})
 new_talent = Talent.new
 new_talent ["actor_name"] = "Anne Hathaway"
 new_talent.save
-anne = Talent.where ({"actor_name" => "Anne Hathaway"})
-"Bruce Wayne"
-"Alfred"
-"Ra's Al Ghul"
-"Rachel Dawes"
-"Commissioner Gordon"
-"Bruce Wayne"
-"Joker"
-"Harvey Dent"
-"Alfred"
-"Rachel Dawes"
-"Bruce Wayne"
-"Commissiones Gordon"
-"Bane"
-"John Blake"
-"Selina Kyle"
-new_character = ["character_name"] = 
-new_character = Character.new
-new_character = ["character_name"] = 
-new_character = Character.new
-new_character = ["character_name"] = 
-new_character = Character.new
-new_character = ["character_name"] = 
-new_character = Character.new
-new_character = ["character_name"] = 
-new_character = Character.new
-new_character = ["character_name"] = 
-new_character = Character.new
-new_character = ["character_name"] = 
-new_character = Character.new
-new_character = ["character_name"] = 
-new_character = Character.new
-new_character = ["character_name"] = 
-new_character = Character.new
-new_character = ["character_name"] = 
-new_character = Character.new
-new_character = ["character_name"] = 
-new_character = Character.new
-new_character = ["character_name"] = 
-new_character = Character.new
-new_character = ["character_name"] = 
-new_character = Character.new
-new_character = ["character_name"] = 
-new_character = Character.new
-new_character = ["character_name"] = 
-new_character = Character.new
-new_character = ["character_name"] = 
-new_character = Character.new
-new_character = ["character_name"] = 
+anne = Talent.find_by ({"actor_name" => "Anne Hathaway"})
 
+
+new_character ["character_name"] = "Bruce Wayne"
+new_character ["movie_id"] = begins ["id"]
+new_character ["talent_id"] = christian ["id"]
+new_character.save
+
+new_character = Character.new
+new_character ["character_name"] = "Alfred"
+new_character ["movie_id"] = begins ["id"]
+new_character ["talent_id"] = michael ["id"]
+new_character.save
+new_character = Character.new
+new_character ["character_name"] = "Ra's Al Ghul"
+new_character ["movie_id"] = begins ["id"]
+new_character ["talent_id"] = liam ["id"]
+new_character.save
+new_character = Character.new
+new_character ["character_name"] = "Rachel Dawes"
+new_character ["movie_id"] = begins ["id"]
+new_character ["talent_id"] = katie ["id"]
+new_character.save
+new_character = Character.new
+new_character ["character_name"] = "Commissioner Gordon"
+new_character ["movie_id"] = begins ["id"]
+new_character ["talent_id"] = gary ["id"]
+new_character.save
+new_character = Character.new
+new_character ["character_name"] = "Bruce Wayne"
+new_character ["movie_id"] = knight ["id"]
+new_character ["talent_id"] = christian ["id"]
+new_character.save
+new_character = Character.new
+new_character ["character_name"] = "Joker"
+new_character ["movie_id"] = knight ["id"]
+new_character ["talent_id"] = heath ["id"]
+new_character.save
+new_character = Character.new
+new_character ["character_name"] = "Harvey Dent"
+new_character ["movie_id"] = knight ["id"]
+new_character ["talent_id"] = aaron ["id"]
+new_character.save
+new_character = Character.new
+new_character ["character_name"] = "Alfred"
+new_character ["movie_id"] = knight ["id"]
+new_character ["talent_id"] = michael ["id"]
+new_character.save
+new_character = Character.new
+new_character ["character_name"] = "Rachel Dawes"
+new_character ["movie_id"] = knight ["id"]
+new_character ["talent_id"] = maggie ["id"]
+new_character.save
+new_character = Character.new
+new_character ["character_name"] = "Bruce Wayne"
+new_character ["movie_id"] = rises ["id"]
+new_character ["talent_id"] = christian ["id"]
+new_character.save
+new_character = Character.new
+new_character ["character_name"] = "Commissioner Gordon"
+new_character ["movie_id"] = rises ["id"]
+new_character ["talent_id"] = gary ["id"]
+new_character.save
+new_character = Character.new
+new_character ["character_name"] = "Bane"
+new_character ["movie_id"] = rises ["id"]
+new_character ["talent_id"] = tom ["id"]
+new_character.save
+
+new_character = Character.new
+new_character ["character_name"] = "John Blake"
+new_character ["movie_id"] = rises ["id"]
+new_character ["talent_id"] = joseph ["id"]
+new_character.save
+
+new_character = Character.new
+new_character ["character_name"] = "Selina Kyle"
+new_character ["movie_id"] = rises ["id"]
+new_character ["talent_id"] = anne ["id"]
+new_character.save
 
 
 # TODO!
@@ -218,6 +248,10 @@ puts "======"
 puts ""
 
 # Query the movies data and loop through the results to display the movies output.
+
+for movie in Movie
+    puts "#{movie["movie_name"]}"
+end
 # TODO!
 
 # Prints a header for the cast output
