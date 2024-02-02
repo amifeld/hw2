@@ -85,7 +85,7 @@ new_character = Character.new
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
-warner_bros = Studio.find_by ({"studio_name" => "Warner Bros."})
+
 
 new_studio ["studio_name"] = "Warner Bros."
 new_studio.save
@@ -109,6 +109,43 @@ new_movie ["year_released"] = "2005"
 new_movie ["age_rating"] = "PG-13"
 new_movie ["studio"] = warner_bros ["id"]
 new_movie.save
+
+new_talent = Talent.new
+new_talent ["actor_name"] = "Christian Bale"
+new_talent.save
+new_talent = Talent.new
+new_talent ["actor_name"] = "Michael Cain"
+new_talent.save
+new_talent = Talent.new
+new_talent ["actor_name"] = "Liam Neeson"
+new_talent.save
+new_talent = Talent.new
+new_talent ["actor_name"] = "Katie Holmes"
+new_talent.save
+new_talent = Talent.new
+new_talent ["actor_name"] = "Gary Oldman"
+new_talent.save
+new_talent = Talent.new
+new_talent ["actor_name"] = "Heath Ledger"
+new_talent.save
+new_talent = Talent.new
+new_talent ["actor_name"] = "Aaron Eckhart"
+new_talent.save
+new_talent = Talent.new
+new_talent ["actor_name"] = "Maggie Gyllenhaal"
+new_talent.save
+new_talent = Talent.new
+new_talent ["actor_name"] = "Tom Hardy"
+new_talent.save
+new_talent = Talent.new
+new_talent ["actor_name"] = "Joseph Gordon-Levitt"
+new_talent.save
+new_talent = Talent.new
+new_talent ["actor_name"] = "Anne Hathaway"
+new_talent.save
+
+
+
 # TODO!
 
 # Prints a header for the movies output
