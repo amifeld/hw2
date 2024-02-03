@@ -239,6 +239,7 @@ new_character ["movie_id"] = rises ["id"]
 new_character ["talent_id"] = anne ["id"]
 new_character.save
 
+movie_page = Movie.where ({ "studio" => warner_bros["id"] })
 
 # TODO!
 
@@ -248,10 +249,14 @@ puts "======"
 puts ""
 
 # Query the movies data and loop through the results to display the movies output.
-
-for movie in Movie
-    puts "#{movie["movie_name"]}"
+for movie in movie_page
+    title = movie["movie_name"]
+    year = movie["year_released"]
+    rating = movie["age_rating"]
+    studio = "Warner Bros."
+    puts "#{title}  #{year}  #{rating}  #{studio}"
 end
+
 # TODO!
 
 # Prints a header for the cast output
