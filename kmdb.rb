@@ -253,8 +253,9 @@ for movie in movie_page
     title = movie["movie_name"]
     year = movie["year_released"]
     rating = movie["age_rating"]
-    studio = "Warner Bros."
-    puts "#{title}  #{year}  #{rating}  #{studio}"
+    studio = Studio.find_by ({"id" => movie["studio"]})
+    studio_name = studio["studio_name"]
+    puts "#{title}  #{year}  #{rating}  #{studio_name}"
 end
 
 # TODO!
@@ -266,4 +267,15 @@ puts "========"
 puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
+character_page = Character.where ({ "movie_id" => begins["id"], 
+"talent_id" => christian["id"]})
+for character in character_page
+    film = Movie.find_by ({"id" => character["movie_id"]})
+    film_title = film["movie_name"]
+    actor = Talent.find_by ({"id" => character["talent_id"]})
+    actor_name = actor["actor_name"]
+    character_name = character["character_name"]
+
+    puts "#{film_title} #{actor_name} #{character_name}"
+end
 # TODO!
