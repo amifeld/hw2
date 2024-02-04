@@ -239,7 +239,7 @@ new_character ["movie_id"] = rises ["id"]
 new_character ["talent_id"] = anne ["id"]
 new_character.save
 
-movie_page = Movie.where ({ "studio" => warner_bros["id"] })
+movie_page = Movie.all
 
 # TODO!
 
@@ -255,7 +255,8 @@ for movie in movie_page
     rating = movie["age_rating"]
     studio = Studio.find_by ({"id" => movie["studio"]})
     studio_name = studio["studio_name"]
-    puts "#{title}  #{year}  #{rating}  #{studio_name}"
+    printf("%-22s %-22s %-22s\n", title, year, rating, studio_name)
+    
 end
 
 # TODO!
@@ -267,15 +268,14 @@ puts "========"
 puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
-character_page = Character.where ({ "movie_id" => begins["id"], 
-"talent_id" => christian["id"]})
+character_page = Character.all 
 for character in character_page
     film = Movie.find_by ({"id" => character["movie_id"]})
     film_title = film["movie_name"]
     actor = Talent.find_by ({"id" => character["talent_id"]})
     actor_name = actor["actor_name"]
     character_name = character["character_name"]
-
-    puts "#{film_title} #{actor_name} #{character_name}"
+    printf("%-22s %-22s %-22s\n", film_title, actor_name, character_name)
+   
 end
 # TODO!
